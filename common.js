@@ -38,16 +38,16 @@ item3.showPrice();
 
 
 //Computed property(계산된 프로퍼디)
-let a = 'age';
-const user = {
-    name: 'Mike',
-    [a]: 30 //age: 30
-}
+// let a = 'age';
+// const user = {
+//     name: 'Mike',
+//     [a]: 30 //age: 30
+// }
 
-const users = {
-    [1 + 4]: 5,
-    ['안녕' + '하세요']: "Hello"
-}
+// const users = {
+//     [1 + 4]: 5,
+//     ['안녕' + '하세요']: "Hello"
+// }
 
 //객체에서 사용할 수 있는 몇가지 methods
 //Object.assign()
@@ -83,3 +83,77 @@ const users = {
 // const info2 = {
 //     gender: 'male'
 // }
+
+// object.assign(user, info1, info2) : 객체 복제
+
+const user = {
+    name : 'Mike',
+    age: 30, 
+    gender: 'male',
+}
+
+// Object.keys(user); ["name", "age", "gender"] : 키 배열 반환
+
+// Object.values(user); ["Mike", 30, "male"] : 값 배열 반환
+
+// Object.entries(user); 
+// [
+//     ["name", "Mike"],
+//     ["age", 30 ],
+//     ["gender", "male"]
+// ] : 키/값 배열 반환
+
+// const arr = [
+//     ["name", "Mike"],
+//     ["age", 30],
+//     ["gender", "male"]
+// ];
+// Object.fromEntries(arr);
+
+// {
+//     name: 'Mike',
+//     age: 30,
+//     gender: 'male'
+// }
+// : 키/값 배열을 객체로
+
+
+// let n ="name";
+// let a = "age";
+
+// const user = {
+//     [n]: "Mike",
+//     [a]: 30,
+//     [1 + 4]: 5,
+// };
+// : {5: 5, name: "Mike", age: 30}
+
+function makeObj(key, val){
+    return {
+        [key]: val
+    }
+}
+
+// const obj = makeObj("나이", 33);
+
+// console.log(obj)
+// : {나이: 33}
+
+// const obj = makeObj("성별", "male");
+// {성별: "male"}
+
+// const user = {
+//     name: "Mike",
+//     age: 30,
+// };
+
+// const user2 = user 
+// 이런 식으로 복사하면 안됨 복사하고 싶으먄
+
+
+// const user2 = Object.assign({}, user);
+// console.log(user2)
+
+// 이런식으로 해줘야 값이 바뀌지 않고 복사됨
+
+
