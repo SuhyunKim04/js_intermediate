@@ -49,4 +49,37 @@ const users = {
     ['안녕' + '하세요']: "Hello"
 }
 
-users();
+//객체에서 사용할 수 있는 몇가지 methods
+//Object.assign()
+//Object.keys()
+//Object.values()
+//Object.entries()
+//Object.fromEntries()
+
+//Object.assign(): 객체 복제
+// const hun = {
+//     name : 'Mike',
+//     age: 30
+// }
+//동일하게 복사를 하려면
+// const newUser = Object.assign({}, hun);
+// { } + {name: 'Mike', age:30} = {name: 'Mike', age: 30}
+
+// Object.assign({gender: 'male'}, hun);
+// gender: 'male',
+// name: 'Mike',
+// age: 30
+
+//만약 key가 같다면
+//덮어쓰기
+
+// const user = {
+//     name: 'Mike'
+// }
+// const info1 = {
+//     age: 30,
+// }
+
+// const info2 = {
+//     gender: 'male'
+// }
