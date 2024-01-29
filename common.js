@@ -118,6 +118,27 @@ const user = {
 // : 키/값 배열을 객체로
 
 
+// symbol: 유일성 보장
+// const id = Symbol('id');
+// const user = {
+//     name: 'Mike',
+//     age: 30,
+//     [id]: 'myid'
+// }
+// {name: "Mike", age: 30, Symbol(id): "myid"}
+//Object.keys(user); ['name', 'age']
+
+
+//Symbol.for(): 전역 심볼
+// 하나의 심볼만 보장받을 수 있음
+// 없으면 만들고, 있으면 가져오기 때문
+// Symbol 함수는 매번 다른 Symbol 값을 생성하지만,
+// Symbol.for 매소드는 하나를 생성한 뒤 키를 통해 같은 Symbol을 공유
+
+const id1 = Symbol.for('id');
+const id2 = Symbol.for('id')
+
+
 // let n ="name";
 // let a = "age";
 
