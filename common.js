@@ -20,19 +20,19 @@
 
 // user5.sayName();
 
-function Item(title, price){
-    this.title = title;
-    this.price = price;
-    this.showPrice = function(){
-        console.log(`가격은 ${price} 원 입니다.`)
-    }
-    //return this;
-}
-const item1 = new Item('인형', 3000);
-const item2 = new Item('가방', 4000);
-const item3 = new Item('지갑', 8000);
-console.log(item1, item2, item3);
-item3.showPrice();
+// function Item(title, price){
+//     this.title = title;
+//     this.price = price;
+//     this.showPrice = function(){
+//         console.log(`가격은 ${price} 원 입니다.`)
+//     }
+//     //return this;
+// }
+// const item1 = new Item('인형', 3000);
+// const item2 = new Item('가방', 4000);
+// const item3 = new Item('지갑', 8000);
+// console.log(item1, item2, item3);
+// item3.showPrice();
 //생성자 함수는 까먹지말고 new를 붙여줘야함
 
 
@@ -86,11 +86,11 @@ item3.showPrice();
 
 // object.assign(user, info1, info2) : 객체 복제
 
-const user = {
-    name : 'Mike',
-    age: 30, 
-    gender: 'male',
-}
+// const user = {
+//     name : 'Mike',
+//     age: 30, 
+//     gender: 'male',
+// }
 
 // Object.keys(user); ["name", "age", "gender"] : 키 배열 반환
 
@@ -138,6 +138,52 @@ const user = {
 const id1 = Symbol.for('id');
 const id2 = Symbol.for('id')
 
+//숨겨진 Symbol key 보는 법
+//const id = Symbol ('id')
+// const user = {
+//     name: 'Mike',
+//     age: 30,
+//     [id] : 'myid'
+// }
+
+//Object.getOwnPropertySymbols(user);  [Symbol(id)] => Symbol 만 볼 수 있다
+//Reflect.ownKeys(user) ["name", "age", Symbol(id)] => Symbol형 키를 포함한 객체의 모든 키를 보여준다
+
+// const user = {
+//  name: "Mike",
+//  age: 30,
+// }
+
+// //내가 작업
+// // user.showName = function() {}
+// const showName = Symbol('show name');
+// user[showName] = function() {
+//     console.log(this.name)
+// }
+
+// user[showName]();
+
+// //사용자가 접속하면 보는 메세지
+// for (let key in user) {
+//     console.log(`His ${key} is ${user[key]}.`)
+// }
+
+
+// Number, Math
+// toString()
+// 10진수 => 2진수/16진수
+// let num = 10;
+// num.toString(); // "10"
+// num.toString(2); // "1010"
+// let num2 = 255;
+// num2.toString(16);// "ff"
+
+
+//Math.ceil() :올림
+//let num1 = 5.1;
+//let num2 = 5.7;
+
+
 
 // let n ="name";
 // let a = "age";
@@ -149,11 +195,11 @@ const id2 = Symbol.for('id')
 // };
 // : {5: 5, name: "Mike", age: 30}
 
-function makeObj(key, val){
-    return {
-        [key]: val
-    }
-}
+// function makeObj(key, val){
+//     return {
+//         [key]: val
+//     }
+// }
 
 // const obj = makeObj("나이", 33);
 
